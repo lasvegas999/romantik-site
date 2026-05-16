@@ -36,7 +36,7 @@ loginForm.addEventListener("submit", async (event) => {
   statusText.textContent = "Kayıtlar yükleniyor...";
 
   try {
-    const response = await fetch("/.netlify/functions/get-logs", {
+    const response = await fetch("/api/get-logs", {
       headers: {
         Authorization: `Bearer ${passwordInput.value}`,
       },

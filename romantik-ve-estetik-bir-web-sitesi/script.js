@@ -5,7 +5,7 @@ const bouquetWrap = document.querySelector("#bouquetWrap");
 
 async function recordChoice(choice) {
   try {
-    await fetch("/.netlify/functions/log-choice", {
+    await fetch("/api/log-choice", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
