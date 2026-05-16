@@ -262,8 +262,6 @@ body.is-unsure .card {
   animation: pulseDrama 900ms ease both;
 }
 
-body.is-unsure .button-no {
-  display: none;
 }
 
 body.is-final::before,
