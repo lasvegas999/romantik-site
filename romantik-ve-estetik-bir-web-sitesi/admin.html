@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seçim Kayıtları</title>
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <main class="admin-shell">
+      <section class="admin-card">
+        <p class="eyebrow">Özel alan</p>
+        <h1>Seçim kayıtları</h1>
+
+        <form id="loginForm" class="login-form">
+          <label for="password">Yönetici şifresi</label>
+          <div class="login-row">
+            <input id="password" name="password" type="password" autocomplete="current-password" required />
+            <button type="submit">Giriş yap</button>
+          </div>
+          <p class="helper">Bu sayfa yalnızca şifreyle açılır.</p>
+        </form>
+
+        <section id="dashboard" class="dashboard" hidden>
+          <div class="summary">
+            <article>
+              <span>Toplam</span>
+              <strong id="totalCount">0</strong>
+            </article>
+            <article>
+              <span>Evet</span>
+              <strong id="yesCount">0</strong>
+            </article>
+            <article>
+              <span>Hayır</span>
+              <strong id="noCount">0</strong>
+            </article>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Saat</th>
+                  <th>Buton</th>
+                </tr>
+              </thead>
+              <tbody id="recordsBody"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <p id="status" class="status" role="status"></p>
+      </section>
+    </main>
+
+    <script src="admin.js"></script>
+  </body>
+</html>
