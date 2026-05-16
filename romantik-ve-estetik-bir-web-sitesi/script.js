@@ -21,7 +21,7 @@ noButton.addEventListener("click", () => {
   recordChoice("Hayır");
   document.body.classList.add("is-unsure");
   headline.textContent = "Emin misinnn 😔";
-  yesButton.textContent = "Evet ❤️";
+  yesButton.textContent = "Hayır";
 });
 
 yesButton.addEventListener("click", () => {
