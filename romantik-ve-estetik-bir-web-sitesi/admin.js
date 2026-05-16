@@ -16,14 +16,17 @@ function formatDate(isoString) {
 
 function renderRecords(records) {
   totalCount.textContent = records.length;
-  yesCount.textContent = records.filter((record) => record.choice.startsWith("Evet")).length;
+  yesCount.textContent = records.filter((record) => record.choice === "Evet").length;
   noCount.textContent = records.filter((record) => record.choice === "Hayır").length;
 
   recordsBody.innerHTML = records
     .map(
       (record) => `
         <tr>
+          <td>${record.visitorName}</td>
           <td>${formatDate(record.createdAt)}</td>
+          <td>${record.stage === "initial" ? "İlk soru" : "Emin misin?"}</td>
+          <td>${record.step}</td>
           <td>${record.choice}</td>
         </tr>
       `,
